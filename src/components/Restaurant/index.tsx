@@ -9,31 +9,34 @@ import {
 } from './styles';
 
 import { Button } from '../RestaurantButton/styles';
-import restaurantImage from '../../assets/images/restaurantOne.png';
 import star from '../../assets/images/star.svg';
 import RestaurantButton from '../RestaurantButton';
 
-const Restaurant = () => (
+type Props = {
+  name: string;
+  image: string;
+  type: string[];
+  stars: string;
+  about: string;
+};
+
+const Restaurant = ({ name, image, type, stars, about }: Props) => (
   <Container>
-    <RestaurantImg src={restaurantImage} alt="Imagem do Restaurante" />
+    <RestaurantImg src={image} alt="Imagem do Restaurante" />
     <ButtonGroup>
-      <Button typeOf="tag">Destaque da Semana</Button>
-      <Button typeOf="tag">Japonesa</Button>
+      {type.map((item) => (
+        <Button typeOf="tag">{item}</Button>
+      ))}
     </ButtonGroup>
     <Information>
       <TitleDiv>
-        <h2>Hioki Sushi</h2>
+        <h2>{name}</h2>
         <Pontuation>
-          <span>4.9</span>
+          <span>{stars}</span>
           <img src={star} alt="Star" />
         </Pontuation>
       </TitleDiv>
-      <About>
-        Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis
-        frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega
-        rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão
-        sem sair do lar com nosso delivery!
-      </About>
+      <About>{about}</About>
       <RestaurantButton typeOf="submit" title="Saiba Mais">
         Saiba Mais
       </RestaurantButton>

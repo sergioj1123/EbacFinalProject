@@ -8,6 +8,7 @@ export const Container = styled.div`
   align-items: center;
   border: 1px solid ${colors.salmon};
   max-width: 472px;
+  background-color: ${colors.white};
 `;
 
 export const RestaurantImg = styled.img`
