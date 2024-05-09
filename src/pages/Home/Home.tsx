@@ -1,8 +1,8 @@
-import RestaurantList from '../components/RestaurantList';
-import Header from '../components/header';
-import restaurantImage from '../assets/images/restaurantOne.png';
-import restaurantTwoImage from '../assets/images/restaurantTwo.png';
-import Restaurant from '../models/Restaurant';
+import RestaurantList from '../../components/RestaurantList';
+import Header from '../../components/header';
+import restaurantImage from '../../assets/images/restaurantOne.png';
+import restaurantTwoImage from '../../assets/images/restaurantTwo.png';
+import Restaurant from '../../models/Restaurant';
 
 const restaurants: Restaurant[] = [
   {

@@ -4,11 +4,12 @@ export type Props = {
   children: string;
   typeOf: 'tag' | 'submit';
   title?: string;
+  to?: string;
 };
 
-const RestaurantButton = ({ title, children, typeOf }: Props) => (
+const RestaurantButton = ({ title, children, typeOf, to }: Props) => (
   <>
-    <Button title={title} typeOf={typeOf}>
+    <Button title={title} typeOf={typeOf} to={to as string}>
       {children}
     </Button>
   </>

@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 import { Props } from '.';
 import colors from '../../styles/variables';
+import { Link } from 'react-router-dom';
 
-export const Button = styled.button<Omit<Props, 'title'>>`
+export const Button = styled(Link)<Omit<Props, 'title'>>`
   color: ${colors.lightSalmon};
   background-color: ${colors.salmon};
   padding: 6px 4px;

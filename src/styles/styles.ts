@@ -9,6 +9,7 @@ export const GlobalCss = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     list-style: none;
     color: ${colors.salmon};
+    text-decoration: none;
   }
 
   .container {

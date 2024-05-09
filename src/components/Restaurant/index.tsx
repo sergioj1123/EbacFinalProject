@@ -37,7 +37,7 @@ const Restaurant = ({ name, image, type, stars, about }: Props) => (
         </Pontuation>
       </TitleDiv>
       <About>{about}</About>
-      <RestaurantButton typeOf="submit" title="Saiba Mais">
+      <RestaurantButton typeOf="submit" title="Saiba Mais" to="/restaurant">
         Saiba Mais
       </RestaurantButton>
     </Information>
