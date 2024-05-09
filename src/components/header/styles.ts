@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import colors from '../../styles/variables';
 import backGroundImg from '../../assets/images/headerBackGround.svg';
 
 export const HeaderContainer = styled.header`
   background-image: url(${backGroundImg});
-  color: ${colors.salmon};
+  padding-top: 64px;
 
   .container {
     display: flex;
@@ -14,7 +13,6 @@ export const HeaderContainer = styled.header`
 `;
 
 export const Logo = styled.img`
-  margin-top: 64px;
   max-width: 125px;
 `;
 
@@ -25,5 +23,4 @@ export const Slogan = styled.h2`
   font-weight: 900;
   font-size: 36px;
   line-height: 42.19px;
-  color: ${colors.salmon};
 `;

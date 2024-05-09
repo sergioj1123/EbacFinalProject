@@ -29,7 +29,6 @@ export const Information = styled.div`
   flex-direction: column;
   gap: 16px;
   padding: 8px;
-  color: ${colors.salmon};
 `;
 
 export const TitleDiv = styled.div`
