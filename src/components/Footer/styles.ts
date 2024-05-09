@@ -29,4 +29,6 @@ export const Text = styled.p`
   font-weight: 400;
   font-size: 10px;
   line-height: 11px;
+  max-width: 480px;
+  text-align: center;
 `;
