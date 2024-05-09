@@ -1,3 +1,4 @@
+import Restaurant from './components/Restaurant';
 import Header from './components/header';
 import { GlobalCss } from './styles/styles';
 
@@ -6,7 +7,9 @@ function App() {
     <>
       <GlobalCss />
       <Header />
-      <div className="container"></div>
+      <div className="container">
+        <Restaurant />
+      </div>
     </>
   );
 }
