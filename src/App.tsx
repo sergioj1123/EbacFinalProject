@@ -1,12 +1,12 @@
+import Header from './components/header';
 import { GlobalCss } from './styles/styles';
 
 function App() {
   return (
     <>
-      <div className="container">
-        <GlobalCss />
-        <h1>Hello World</h1>
-      </div>
+      <GlobalCss />
+      <Header />
+      <div className="container"></div>
     </>
   );
 }
