@@ -1,16 +1,13 @@
-import Restaurant from './components/Restaurant';
-import Header from './components/header';
+import { BrowserRouter } from 'react-router-dom';
 import { GlobalCss } from './styles/styles';
+import Router from './routes';
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <GlobalCss />
-      <Header />
-      <div className="container">
-        <Restaurant />
-      </div>
-    </>
+      <Router />
+    </BrowserRouter>
   );
 }
 
