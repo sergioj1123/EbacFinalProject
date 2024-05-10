@@ -25,7 +25,9 @@ const Restaurant = ({ name, image, type, stars, about }: Props) => (
     <RestaurantImg src={image} alt="Imagem do Restaurante" />
     <ButtonGroup>
       {type.map((item) => (
-        <Button typeOf="tag">{item}</Button>
+        <Button to={'/'} typeOf="tag">
+          {item}
+        </Button>
       ))}
     </ButtonGroup>
     <Information>
