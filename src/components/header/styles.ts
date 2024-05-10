@@ -3,7 +3,7 @@ import backGroundImg from '../../assets/images/headerBackGround.svg';
 
 export const HeaderContainer = styled.header`
   background-image: url(${backGroundImg});
-  padding-top: 64px;
+  padding: 64px 0;
 
   .container {
     display: flex;
