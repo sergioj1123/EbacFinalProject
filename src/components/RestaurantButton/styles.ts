@@ -4,7 +4,7 @@ import { Props } from '.';
 import colors from '../../styles/variables';
 import { Link } from 'react-router-dom';
 
-export const Button = styled(Link)<Omit<Props, 'title' | 'children' | 'to'>>`
+export const Button = styled(Link)<Omit<Props, 'title' | 'children'>>`
   color: ${colors.lightSalmon};
   background-color: ${colors.salmon};
   padding: 6px 4px;
