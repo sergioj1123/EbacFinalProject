@@ -1,7 +1,6 @@
 import Banner from '../../components/Banner';
 import HeaderInsidePage from '../../components/HeaderInsidePage';
 import backgroundURL from '../../assets/images/banner.png';
-import { restaurants } from '../Home/Home';
 import foodURL from '../../assets/images/food.png';
 import FoodList from '../../components/FoodList';
 import { Food } from '../../models/Food';
@@ -55,8 +54,8 @@ const InsideRestaurant = () => (
   <div className="mainBackGround">
     <HeaderInsidePage />
     <Banner
-      title={restaurants[0].name}
-      type={restaurants[0].type}
+      title={'Bella Tavola Italiana'}
+      type={'Italiana'}
       background={backgroundURL}
     />
     <div className="container">

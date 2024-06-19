@@ -2,7 +2,7 @@ import { Container, Opacity, Tags, TagsList, Title } from './styles';
 
 export type Props = {
   title: string;
-  type: string[];
+  type: string;
   background: string;
 };
 
@@ -11,9 +11,7 @@ const Banner = ({ title, type, background }: Props) => (
     <Opacity />
     <div className="container">
       <TagsList>
-        {type.map((tag) => (
-          <Tags>{tag}</Tags>
-        ))}
+        <Tags>{type}</Tags>
       </TagsList>
       <Title>{title}</Title>
     </div>

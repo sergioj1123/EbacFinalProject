@@ -15,8 +15,8 @@ import RestaurantButton from '../RestaurantButton';
 type Props = {
   name: string;
   image: string;
-  type: string[];
-  stars: string;
+  type: string;
+  stars: number;
   about: string;
 };
 
@@ -24,11 +24,9 @@ const Restaurant = ({ name, image, type, stars, about }: Props) => (
   <Container>
     <RestaurantImg src={image} alt="Imagem do Restaurante" />
     <ButtonGroup>
-      {type.map((item) => (
-        <Button to={'/'} typeOf="tag">
-          {item}
-        </Button>
-      ))}
+      <Button to={'/'} typeOf="tag">
+        {type}
+      </Button>
     </ButtonGroup>
     <Information>
       <TitleDiv>
