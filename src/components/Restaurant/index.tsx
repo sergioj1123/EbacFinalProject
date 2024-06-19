@@ -18,9 +18,10 @@ type Props = {
   type: string;
   stars: number;
   about: string;
+  id: number;
 };
 
-const Restaurant = ({ name, image, type, stars, about }: Props) => (
+const Restaurant = ({ name, image, type, stars, about, id }: Props) => (
   <Container>
     <RestaurantImg src={image} alt="Imagem do Restaurante" />
     <ButtonGroup>
@@ -37,7 +38,11 @@ const Restaurant = ({ name, image, type, stars, about }: Props) => (
         </Pontuation>
       </TitleDiv>
       <About>{about}</About>
-      <RestaurantButton typeOf="submit" title="Saiba Mais" to="/restaurant">
+      <RestaurantButton
+        typeOf="submit"
+        title="Saiba Mais"
+        to={'/restaurant/' + id}
+      >
         Saiba Mais
       </RestaurantButton>
     </Information>

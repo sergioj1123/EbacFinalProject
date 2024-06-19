@@ -5,7 +5,7 @@ import InsideRestaurant from './pages/InsideRestaurant/InsideRestaurant';
 const Router = () => (
   <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/restaurant" element={<InsideRestaurant />} />
+    <Route path="/restaurant/:id" element={<InsideRestaurant />} />
   </Routes>
 );
 

@@ -1,67 +1,35 @@
 import Banner from '../../components/Banner';
 import HeaderInsidePage from '../../components/HeaderInsidePage';
-import backgroundURL from '../../assets/images/banner.png';
-import foodURL from '../../assets/images/food.png';
 import FoodList from '../../components/FoodList';
-import { Food } from '../../models/Food';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { Restaurant } from '../Home/Home';
 
-export const foodList: Food[] = [
-  {
-    title: 'Pizza Marguerita',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    image: foodURL,
-    id: 1,
-  },
-  {
-    title: 'Pizza Marguerita',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    image: foodURL,
-    id: 2,
-  },
-  {
-    title: 'Pizza Marguerita',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    image: foodURL,
-    id: 3,
-  },
-  {
-    title: 'Pizza Marguerita',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    image: foodURL,
-    id: 4,
-  },
-  {
-    title: 'Pizza Marguerita',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    image: foodURL,
-    id: 5,
-  },
-  {
-    title: 'Pizza Marguerita',
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    image: foodURL,
-    id: 6,
-  },
-];
+const InsideRestaurant = () => {
+  const { id } = useParams<{ id: string }>();
+  const [restaurant, setRestaurant] = useState<Restaurant>();
 
-const InsideRestaurant = () => (
-  <div className="mainBackGround">
-    <HeaderInsidePage />
-    <Banner
-      title={'Bella Tavola Italiana'}
-      type={'Italiana'}
-      background={backgroundURL}
-    />
-    <div className="container">
-      <FoodList foods={foodList} />
+  useEffect(() => {
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes/' + id)
+      .then((res) => res.json())
+      .then((res) => setRestaurant(res));
+  }, [id]);
+
+  if (!restaurant) return <div>Carregando...</div>;
+
+  return (
+    <div className="mainBackGround">
+      <HeaderInsidePage />
+      <Banner
+        title={restaurant.titulo}
+        type={restaurant.tipo}
+        background={restaurant.capa}
+      />
+      <div className="container">
+        <FoodList cardapio={restaurant.cardapio} />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default InsideRestaurant;
