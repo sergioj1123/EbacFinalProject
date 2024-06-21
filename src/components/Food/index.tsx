@@ -20,7 +20,7 @@ const Food = ({ title, description, image, onClick }: Props) => {
       <Image src={image} alt="Imagem do prato" />
       <Title>{title}</Title>
       <Description>{getDescription(description)}</Description>
-      <Button onClick={onClick}>Adicionar ao carrinho</Button>
+      <Button onClick={onClick}>Mais detalhes</Button>
     </Container>
   );
 };
