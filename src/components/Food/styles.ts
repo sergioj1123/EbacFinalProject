@@ -12,6 +12,9 @@ export const Container = styled.li`
 export const Image = styled.img`
   max-width: 300px;
   max-width: 100%;
+  max-height: 168px;
+  height: 100%;
+  object-fit: cover;
 `;
 
 export const Title = styled.h2`
