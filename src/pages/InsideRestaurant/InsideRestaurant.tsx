@@ -3,6 +3,7 @@ import HeaderInsidePage from '../../components/HeaderInsidePage';
 import FoodList from '../../components/FoodList';
 import { useParams } from 'react-router-dom';
 import { useGetFoodQuery } from '../../services/api';
+import Cart from '../../components/Cart';
 
 const InsideRestaurant = () => {
   const { id } = useParams<{ id: string }>();
@@ -21,6 +22,7 @@ const InsideRestaurant = () => {
       <div className="container">
         <FoodList cardapio={restaurant.cardapio} />
       </div>
+      <Cart></Cart>
     </div>
   );
 };

@@ -22,7 +22,6 @@ export type Restaurant = {
 
 const Home = () => {
   const { data: restaurants } = useGetRestaurantsQuery();
-  console.log(restaurants);
 
   if (restaurants) {
     return (

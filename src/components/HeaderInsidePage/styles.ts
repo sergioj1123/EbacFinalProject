@@ -10,6 +10,9 @@ export const HeaderList = styled.ul`
   font-weight: 900;
   align-items: center;
   justify-content: space-between;
+  p {
+    cursor: pointer;
+  }
 `;
 
 export const ReturnButton = styled(Link)`
