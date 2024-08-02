@@ -4,7 +4,7 @@ import { Button } from '../Food/styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootReducer } from '../../store';
 import { closeCart, remove } from '../../store/reducers/cart';
-import { priceConvert } from '../FoodList';
+import { priceConvert } from '../../utils';
 
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootReducer) => state.cart);

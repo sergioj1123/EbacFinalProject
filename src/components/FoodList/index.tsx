@@ -5,6 +5,7 @@ import { Button } from '../Food/styles';
 import close from '../../assets/images/close.svg';
 import { useDispatch } from 'react-redux';
 import { add, openCart } from '../../store/reducers/cart';
+import { priceConvert } from '../../utils';
 
 type Props = {
   cardapio: {
@@ -25,13 +26,6 @@ export type Food = {
   imageUrl: string;
   valor: number;
   id: number;
-};
-
-export const priceConvert = (price = 0) => {
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL',
-  }).format(price);
 };
 
 const FoodList = ({ cardapio }: Props) => {
