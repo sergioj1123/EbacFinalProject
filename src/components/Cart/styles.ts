@@ -15,6 +15,13 @@ export const CartContainer = styled.div`
   &.is-open {
     display: flex;
   }
+
+  .buttonGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 16px;
+  }
 `;
 
 export const Overlay = styled.div`
@@ -42,6 +49,14 @@ export const Sidebar = styled.aside`
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+  span {
+    display: flex;
+    justify-content: center;
+    color: ${colors.lightSalmon};
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
   }
 `;
 
