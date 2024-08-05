@@ -1,3 +1,4 @@
+import Loader from '../../components/Loader';
 import RestaurantList from '../../components/RestaurantList';
 import Header from '../../components/header';
 import { useGetRestaurantsQuery } from '../../services/api';
@@ -21,19 +22,23 @@ export type Restaurant = {
 };
 
 const Home = () => {
-  const { data: restaurants } = useGetRestaurantsQuery();
+  const { data: restaurants, isLoading } = useGetRestaurantsQuery();
 
   if (restaurants) {
     return (
       <div className="mainBackGround">
         <Header />
         <div className="container">
-          <RestaurantList restaurants={restaurants} />
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <RestaurantList restaurants={restaurants} />
+          )}
         </div>
       </div>
     );
   }
-  return <h3>Carregando...</h3>;
+  return <Loader />;
 };
 
 export default Home;
