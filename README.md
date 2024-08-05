@@ -1,4 +1,4 @@
-# Loja de Jogos
+# Efood
 
 Esse projeto é o front-end de uma aplicação semelhante ao iFood, onde é possível abrir uma lista de restaurantes, verificando suas pontuações e tipos de comida. Dentro da página dos restaurantes, é possível verificar os pratos que oferecem, assim como a quantidade de porções e valor, sendo possível adicionar o alimento ao carrinho. Ao clicar em finalizar a compra no carrinho, é possível preencher os dados do endereço e cartão de crédito. Após finalizar, é exibida a tela com o número do pedido.
 
